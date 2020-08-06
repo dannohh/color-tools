@@ -1,0 +1,33 @@
+{
+  "name": "js-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html"
+  },
+  "keywords": [
+    "css",
+    "html"
+  ],
+  "author": "Manav Misra",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.13.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "htmlhint": "^0.11.0",
+    "parcel-bundler": "^1.12.4",
+    "standard": "^14.3.3",
+    "stylelint": "^13.3.3",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.0.0"
+  },
+  "dependencies": {
+    "color-convert": "^2.0.1"
+  }
+}

@@ -1,0 +1,140 @@
+:root {
+  --bg-color: #333;
+  --fg-color: #c7c7c7;
+  --input-color: #fff;
+  --output-color: #fff;
+  --switch-color-off: #b5b5b5;
+  --switch-color-on: cadetblue;
+}
+
+body {
+  /* https://codepen.io/FelixRilling/pen/qzfoc?__cf_chl_jschl_tk__=0763ac2a0d08058761970f2172bdf3430773753d-1594643151-0-AaV7z3RRthu-TZ-tVSOvjMfP9A_gdvSs22qAUEVWAMlq6whZ7M1hA6RUyDVGYjG2DE383YPvenQW6sctw8ldhAkIgIfhqOWMB9wqK9CsiZsbvgC68-zJSCiZodDzSnzKudF_1dNHNcUvrnt0uoDLjVZ4ZBfx3WtUq6fRDYm-rAM6eIDpuphMTr1Nc3RRZTMA1pwDQJG0_1-iq46XHHXCVplaWyb5qQ2SyleIggERHh8PldphTHPqAEgqKk1PcmZpj6Fo0W4PWVyscuCmTIfNRoMD3q5sHsz2beXqG1QNuyyFH-n5AGy8OmuxpwKTK75PxYfv-M3dFwEqyvNmonULtJFDAeMDYy4_Q7XUQFs7pnzq */
+  background: repeating-linear-gradient(
+      45deg,
+      #2b2b2b 0%,
+      #2b2b2b 10%,
+      #222 0%,
+      #222 50%
+    )
+    0 / 1rem 1rem;
+  background-color: #222;
+  color: var(--fg-color);
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  padding: 1rem 0;
+}
+
+.container {
+  background-color: var(--bg-color);
+  border-radius: 4px;
+  box-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 0.5rem #49fb35;;
+  margin: 0 auto;
+  max-width: 768px;
+  padding: 1rem;
+  width: 90vw;
+}
+
+.container div {
+  margin: 1rem 0;
+}
+
+h1 {
+  color: cadetblue;
+  font-size: 1.802em;
+  margin: 0.5rem 0.5rem 2rem;
+  text-align: center;
+}
+
+label,
+p {
+  margin-bottom: 0.5rem;
+}
+
+label {
+  font-size: 1.125em;
+}
+
+.inputColor,
+.outputColor {
+  height: 10vh;
+  width: 100%;
+}
+
+.inputColor {
+  background-color: var(--input-color);
+}
+
+.outputColor {
+  background-color: var(--output-color);
+}
+
+/* Switch */
+.switchContainer label:first-child {
+  margin-right: 6px;
+}
+
+.switchInput {
+  display: none;
+}
+
+.switchToggle::before {
+  background-color: var(--switch-color-off);
+  border-radius: 32px;
+
+  /* Must have this for anything to show up. */
+  content: "";
+  height: 32px;
+  left: 0;
+  position: absolute;
+  width: 64px;
+}
+
+.switchInput:checked + .switchToggle::before {
+  background-color: var(--switch-color-on);
+}
+
+.switchToggle {
+  padding-left: 76px;
+  padding-top: 4px;
+
+  /* This will control the absolutely positioned elements. */
+  position: relative;
+}
+
+.switchToggle::after {
+  background-color: white;
+  border-radius: 50%;
+  content: "";
+  height: 24px;
+  left: 4px;
+  position: absolute;
+
+  /* Instead of 'all' could just do background-color and translateX */
+  top: 11px;
+  transition: all 0.25s ease-out;
+  width: 24px;
+}
+
+.switchInput:checked + .switchToggle::after {
+  transform: translateX(32px);
+}
+
+/* Utility Classes */
+.flex {
+  display: flex;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--justify-space-around {
+  justify-content: space-around;
+}
+
+/* JS Classes */
+.isActive {
+  color: rgba(73, 251, 53, 0.75);
+  text-shadow: 0 0 1px #49fb35;
+}
+
